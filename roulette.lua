@@ -10,9 +10,9 @@ function roulette.alias(probabilities)
 
 	math.randomseed(os.time())
 	math.random()
-    math.random()
-    math.random()
-    math.random()
+        math.random()
+        math.random()
+        math.random()
 	-- 可以用quick中的方法初始化更随机的种子
 	-- math.newrandomseed()
 	
@@ -68,10 +68,10 @@ function roulette.next()
 
 	local nextDouble = math.random(0,100)/100
 	local coinToss  = false
-	if nextDouble < probability[column] then
+	if nextDouble <= probability[column] then
 		coinToss = true
 	end
-
+	
 	if coinToss then
 		return column
 	end
