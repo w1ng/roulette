@@ -5,9 +5,9 @@ roulette.alias(tbl)
 local a,b,c = 0,0,0
 for i=1,10000 do
 	local temp = roulette.next()
-	if temp == "a" then
+	if tbl[temp][1] == "a" then
 		a = a+1
-	elseif temp == "b" then
+	elseif tbl[temp][1] == "b" then
 		b = b+1
 	else
 		c = c+1
